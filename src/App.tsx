@@ -7,6 +7,7 @@ import PerfilEstudante from "./pages/PerfilEstudante";
 import Notas from './pages/Notas'
 import Sobre from "./pages/Sobre";
 import Registo from "./pages/Registo";
+import NotFound from "./pages/NotFound";
 
 export default function App() {
   return (
@@ -21,6 +22,9 @@ export default function App() {
         <Route path="/notas" element={<Notas />} />
         <Route path="/sobre" element={<Sobre />} />
         <Route path="/registo" element={<Registo />} />
+
+        {/* Rota de não encontrado */}
+        <Route path="*" element={<NotFound />} />
       </Routes>
 
     </BrowserRouter>
