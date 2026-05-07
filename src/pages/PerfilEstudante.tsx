@@ -24,11 +24,7 @@ export default function PerfilEstudante() {
     );
   }
  
-  const iniciais = estudante.nome
-    .split(" ")
-    .map((n: string) => n[0])
-    .slice(0, 2)
-    .join("");
+  const iniciais = estudante.nome.split(" ").map((n: string) => n[0]).slice(0, 2).join("");
  
   const campos = [
     { label: "Curso", valor: estudante.curso, icon: "🎓" },
@@ -39,7 +35,6 @@ export default function PerfilEstudante() {
   return (
     <main className="min-h-screen bg-slate-50 px-6 py-12">
       <div className="max-w-lg mx-auto">
-        {/* Voltar */}
         <Link
           to="/estudantes"
           className="inline-flex items-center gap-1.5 text-sm text-slate-500 hover:text-slate-800 transition mb-8"
@@ -47,15 +42,12 @@ export default function PerfilEstudante() {
           <span>←</span> Voltar à lista
         </Link>
  
-        {/* Card do perfil */}
         <div className="bg-white border border-slate-200 rounded-xl shadow-sm overflow-hidden">
-          {/* Banner */}
           <div className="h-24 bg-blue-900" />
  
-          {/* Avatar + nome */}
           <div className="px-6 pb-6">
             <div className="-mt-10 mb-4">
-              <div className="w-20 h-20 rounded-full bg-blue-600 border-4 border-white flex items-center justify-center text-white text-2xl font-bold shadow">
+              <div className="w-20 h-20 rounded-full bg-blue-600 border-4 border-white flex items-center justify-center text-white text-2xl font-bold ">
                 {iniciais}
               </div>
             </div>
@@ -67,7 +59,6 @@ export default function PerfilEstudante() {
               Estudante
             </span>
  
-            {/* Campos */}
             <div className="space-y-3">
               {campos.map((campo) => (
                 <div

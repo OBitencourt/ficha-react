@@ -22,7 +22,6 @@ export default function Registo() {
   return (
     <main className="min-h-screen bg-slate-50 px-6 py-12">
       <div className="max-w-md mx-auto">
-        {/* Header */}
         <div className="mb-8">
           <span className="inline-block text-xs font-semibold tracking-widest text-blue-600 uppercase mb-3">
             Formulário
@@ -32,10 +31,8 @@ export default function Registo() {
           </h1>
         </div>
  
-        {/* Form card */}
-        <div className="bg-white border border-slate-200 rounded-xl p-6 shadow-sm">
+        <div className="bg-white border border-slate-200 rounded-xl p-6 ">
           <form onSubmit={handleSubmit} className="space-y-5">
-            {/* Nome */}
             <div>
               <label className={labelClass}>Nome</label>
               <input
@@ -47,7 +44,6 @@ export default function Registo() {
               />
             </div>
  
-            {/* Email */}
             <div>
               <label className={labelClass}>Email</label>
               <input
@@ -58,8 +54,7 @@ export default function Registo() {
                 className={inputClass}
               />
             </div>
- 
-            {/* Ano */}
+
             <div>
               <label className={labelClass}>Ano Curricular</label>
               <select
@@ -73,7 +68,6 @@ export default function Registo() {
               </select>
             </div>
  
-            {/* Botão */}
             <button
               type="submit"
               className="w-full py-2.5 px-4 bg-blue-900 hover:bg-blue-800 text-white font-semibold text-sm rounded-lg transition cursor-pointer"
@@ -82,27 +76,6 @@ export default function Registo() {
             </button>
           </form>
         </div>
- 
-        {/* Pré-visualização */}
-        {nome && (
-          <div className="mt-4 p-4 bg-blue-50 border border-blue-200 rounded-xl">
-            <p className="text-xs font-semibold text-blue-600 uppercase tracking-widest mb-2">
-              Pré-visualização
-            </p>
-            <p className="text-sm text-slate-700">
-              <span className="font-semibold">{nome}</span>
-              {email && (
-                <>
-                  {" "}
-                  &middot;{" "}
-                  <span className="text-slate-500">{email}</span>
-                </>
-              )}
-              {" "}
-              &middot; <span className="text-slate-500">{ano}.º Ano</span>
-            </p>
-          </div>
-        )}
       </div>
     </main>
   );

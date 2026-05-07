@@ -11,12 +11,9 @@ export default function Navbar() {
  
   return (
     <nav className="bg-blue-900 px-6 py-0 flex items-center gap-1">
-      {/* Logo / Brand */}
       <span className="text-white font-bold text-sm tracking-tighter uppercase mr-6 py-4">
         Portal da Turma
       </span>
- 
-      {/* Links */}
       {links.map(({ to, label }) => (
         <NavLink
           key={to}

@@ -19,20 +19,18 @@ export default function CartaoUtilizador({
  
   return (
     <div
-      className={`relative flex flex-col gap-2 p-5 rounded-xl border bg-white transition-all hover:shadow-md hover:-translate-y-0.5 ${
+      className={`relative flex flex-col gap-2 p-5 rounded-xl border bg-white transition-all hover:-translate-y-0.5 ${
         destaque
           ? "border-blue-300 ring-1 ring-blue-200"
           : "border-slate-200"
       }`}
     >
-      {/* Badge caloiro */}
       {destaque && (
-        <span className="absolute top-3 right-3 text-[10px] font-bold tracking-widest uppercase px-2 py-0.5 rounded-full bg-blue-100 text-blue-700">
+        <span className="absolute top-3 right-3 text-[10px] font-bold uppercase px-2 py-0.5 rounded-full bg-blue-100 text-blue-700">
           Caloiro
         </span>
       )}
  
-      {/* Avatar */}
       <div
         className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold text-white ${
           destaque ? "bg-blue-600" : "bg-slate-500"
@@ -41,7 +39,6 @@ export default function CartaoUtilizador({
         {iniciais}
       </div>
  
-      {/* Info */}
       <div>
         <h2 className="font-semibold text-slate-800 text-sm leading-tight">
           {nome}
@@ -49,7 +46,6 @@ export default function CartaoUtilizador({
         <p className="text-xs text-slate-500 mt-0.5">{curso}</p>
       </div>
  
-      {/* Ano */}
       <span className="inline-block text-xs text-slate-400 font-medium">
         {ano}.º Ano
       </span>
